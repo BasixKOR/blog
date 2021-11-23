@@ -7,7 +7,7 @@
     "build": "remix build",
     "dev": "remix dev",
     "postinstall": "remix setup node",
-    "deploy": "flyctl deploy --build-arg REMIX_TOKEN=${REMIX_TOKEN}",
+    "deploy": "flyctl deploy",
     "start": "remix-serve build"
   },
   "dependencies": {
