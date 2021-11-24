@@ -7,9 +7,10 @@ import {
   Scripts,
   ScrollRestoration,
   useCatch,
-  useLocation
+  useLocation,
 } from "remix";
 import type { LinksFunction } from "remix";
+import globalCss from "./global.css";
 
 /**
  * The `links` export is a function that returns an array of objects that map to
@@ -21,6 +22,11 @@ import type { LinksFunction } from "remix";
  */
 export let links: LinksFunction = () => {
   return [
+    {
+      rel: "stylesheet",
+      href: "https://cdn.jsdelivr.net/npm/water.css@2/out/water.css",
+    },
+    { rel: "stylesheet", href: globalCss },
   ];
 };
 
@@ -41,7 +47,7 @@ export default function App() {
 
 function Document({
   children,
-  title
+  title,
 }: {
   children: React.ReactNode;
   title?: string;
@@ -171,7 +177,7 @@ const RouteChangeAnnouncement = React.memo(() => {
         position: "absolute",
         width: "1px",
         whiteSpace: "nowrap",
-        wordWrap: "normal"
+        wordWrap: "normal",
       }}
     >
       {innerHtml}
