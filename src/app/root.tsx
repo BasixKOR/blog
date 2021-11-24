@@ -67,7 +67,7 @@ function Document({
 }
 
 function Layout({ children }: React.PropsWithChildren<{}>) {
-  return <>children</>; // FIXME This should be something reasonable.
+  return <>{children}</>; // FIXME This should be something reasonable.
 }
 
 export function CatchBoundary() {
